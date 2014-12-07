@@ -1,0 +1,33 @@
+PODS:
+  - Bolts (1.1.3)
+  - FontAwesomeKit (2.1.8):
+    - FontAwesomeKit/Core
+    - FontAwesomeKit/FontAwesome
+    - FontAwesomeKit/FoundationIcons
+    - FontAwesomeKit/IonIcons
+    - FontAwesomeKit/Zocial
+  - FontAwesomeKit/Core (2.1.8)
+  - FontAwesomeKit/FontAwesome (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.1.8):
+    - FontAwesomeKit/Core
+  - KIProgressView (0.1.1)
+  - Parse (1.5.0):
+    - Bolts (~> 1.1.3)
+
+DEPENDENCIES:
+  - FontAwesomeKit
+  - KIProgressView
+  - Parse
+
+SPEC CHECKSUMS:
+  Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
+  FontAwesomeKit: a2edea3111dab107b4cc43b85881b404eb063385
+  KIProgressView: 7fbb39ca39f30c82aa3d7802944c96492946633f
+  Parse: 7de25b6f70f0b233e5d25835f62eabfa91e4f9d7
+
+COCOAPODS: 0.34.4
