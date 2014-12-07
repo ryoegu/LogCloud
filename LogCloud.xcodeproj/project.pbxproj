@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2ABA20D81A345E410033FA7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA20D71A345E410033FA7B /* main.m */; };
+		2ABA20DB1A345E410033FA7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA20DA1A345E410033FA7B /* AppDelegate.m */; };
+		2ABA20DE1A345E410033FA7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA20DD1A345E410033FA7B /* ViewController.m */; };
+		2ABA20E11A345E410033FA7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ABA20DF1A345E410033FA7B /* Main.storyboard */; };
+		2ABA20E31A345E410033FA7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ABA20E21A345E410033FA7B /* Images.xcassets */; };
+		2ABA20E61A345E410033FA7B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ABA20E41A345E410033FA7B /* LaunchScreen.xib */; };
+		2ABA20F21A345E410033FA7B /* LogCloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA20F11A345E410033FA7B /* LogCloudTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2ABA20EC1A345E410033FA7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2ABA20CA1A345E410033FA7B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2ABA20D11A345E410033FA7B;
+			remoteInfo = LogCloud;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2ABA20D21A345E410033FA7B /* LogCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ABA20D61A345E410033FA7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ABA20D71A345E410033FA7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2ABA20D91A345E410033FA7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2ABA20DA1A345E410033FA7B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2ABA20DC1A345E410033FA7B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2ABA20DD1A345E410033FA7B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2ABA20E01A345E410033FA7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2ABA20E21A345E410033FA7B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2ABA20E51A345E410033FA7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2ABA20EB1A345E410033FA7B /* LogCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogCloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ABA20F01A345E410033FA7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ABA20F11A345E410033FA7B /* LogCloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogCloudTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2ABA20CF1A345E410033FA7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABA20E81A345E410033FA7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2ABA20C91A345E410033FA7B = {
+			isa = PBXGroup;
+			children = (
+				2ABA20D41A345E410033FA7B /* LogCloud */,
+				2ABA20EE1A345E410033FA7B /* LogCloudTests */,
+				2ABA20D31A345E410033FA7B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2ABA20D31A345E410033FA7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2ABA20D21A345E410033FA7B /* LogCloud.app */,
+				2ABA20EB1A345E410033FA7B /* LogCloudTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2ABA20D41A345E410033FA7B /* LogCloud */ = {
+			isa = PBXGroup;
+			children = (
+				2ABA20D91A345E410033FA7B /* AppDelegate.h */,
+				2ABA20DA1A345E410033FA7B /* AppDelegate.m */,
+				2ABA20DC1A345E410033FA7B /* ViewController.h */,
+				2ABA20DD1A345E410033FA7B /* ViewController.m */,
+				2ABA20DF1A345E410033FA7B /* Main.storyboard */,
+				2ABA20E21A345E410033FA7B /* Images.xcassets */,
+				2ABA20E41A345E410033FA7B /* LaunchScreen.xib */,
+				2ABA20D51A345E410033FA7B /* Supporting Files */,
+			);
+			path = LogCloud;
+			sourceTree = "<group>";
+		};
+		2ABA20D51A345E410033FA7B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2ABA20D61A345E410033FA7B /* Info.plist */,
+				2ABA20D71A345E410033FA7B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2ABA20EE1A345E410033FA7B /* LogCloudTests */ = {
+			isa = PBXGroup;
+			children = (
+				2ABA20F11A345E410033FA7B /* LogCloudTests.m */,
+				2ABA20EF1A345E410033FA7B /* Supporting Files */,
+			);
+			path = LogCloudTests;
+			sourceTree = "<group>";
+		};
+		2ABA20EF1A345E410033FA7B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2ABA20F01A345E410033FA7B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2ABA20D11A345E410033FA7B /* LogCloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ABA20F51A345E410033FA7B /* Build configuration list for PBXNativeTarget "LogCloud" */;
+			buildPhases = (
+				2ABA20CE1A345E410033FA7B /* Sources */,
+				2ABA20CF1A345E410033FA7B /* Frameworks */,
+				2ABA20D01A345E410033FA7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LogCloud;
+			productName = LogCloud;
+			productReference = 2ABA20D21A345E410033FA7B /* LogCloud.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2ABA20EA1A345E410033FA7B /* LogCloudTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ABA20F81A345E410033FA7B /* Build configuration list for PBXNativeTarget "LogCloudTests" */;
+			buildPhases = (
+				2ABA20E71A345E410033FA7B /* Sources */,
+				2ABA20E81A345E410033FA7B /* Frameworks */,
+				2ABA20E91A345E410033FA7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2ABA20ED1A345E410033FA7B /* PBXTargetDependency */,
+			);
+			name = LogCloudTests;
+			productName = LogCloudTests;
+			productReference = 2ABA20EB1A345E410033FA7B /* LogCloudTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2ABA20CA1A345E410033FA7B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Ryo Eguchi";
+				TargetAttributes = {
+					2ABA20D11A345E410033FA7B = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					2ABA20EA1A345E410033FA7B = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 2ABA20D11A345E410033FA7B;
+					};
+				};
+			};
+			buildConfigurationList = 2ABA20CD1A345E410033FA7B /* Build configuration list for PBXProject "LogCloud" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2ABA20C91A345E410033FA7B;
+			productRefGroup = 2ABA20D31A345E410033FA7B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2ABA20D11A345E410033FA7B /* LogCloud */,
+				2ABA20EA1A345E410033FA7B /* LogCloudTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2ABA20D01A345E410033FA7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABA20E11A345E410033FA7B /* Main.storyboard in Resources */,
+				2ABA20E61A345E410033FA7B /* LaunchScreen.xib in Resources */,
+				2ABA20E31A345E410033FA7B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABA20E91A345E410033FA7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2ABA20CE1A345E410033FA7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABA20DE1A345E410033FA7B /* ViewController.m in Sources */,
+				2ABA20DB1A345E410033FA7B /* AppDelegate.m in Sources */,
+				2ABA20D81A345E410033FA7B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABA20E71A345E410033FA7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABA20F21A345E410033FA7B /* LogCloudTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2ABA20ED1A345E410033FA7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2ABA20D11A345E410033FA7B /* LogCloud */;
+			targetProxy = 2ABA20EC1A345E410033FA7B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2ABA20DF1A345E410033FA7B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2ABA20E01A345E410033FA7B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2ABA20E41A345E410033FA7B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2ABA20E51A345E410033FA7B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2ABA20F31A345E410033FA7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2ABA20F41A345E410033FA7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2ABA20F61A345E410033FA7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LogCloud/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2ABA20F71A345E410033FA7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LogCloud/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2ABA20F91A345E410033FA7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LogCloudTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LogCloud.app/LogCloud";
+			};
+			name = Debug;
+		};
+		2ABA20FA1A345E410033FA7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LogCloudTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LogCloud.app/LogCloud";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2ABA20CD1A345E410033FA7B /* Build configuration list for PBXProject "LogCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABA20F31A345E410033FA7B /* Debug */,
+				2ABA20F41A345E410033FA7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ABA20F51A345E410033FA7B /* Build configuration list for PBXNativeTarget "LogCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABA20F61A345E410033FA7B /* Debug */,
+				2ABA20F71A345E410033FA7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2ABA20F81A345E410033FA7B /* Build configuration list for PBXNativeTarget "LogCloudTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABA20F91A345E410033FA7B /* Debug */,
+				2ABA20FA1A345E410033FA7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2ABA20CA1A345E410033FA7B /* Project object */;
+}
