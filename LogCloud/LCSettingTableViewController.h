@@ -12,5 +12,7 @@
 @interface LCSettingTableViewController : UITableViewController<UITextFieldDelegate>
 {
     UIFont*faFont;
+    UITextField * callSignTextField;
+    CGRect rect;
 }
 @end

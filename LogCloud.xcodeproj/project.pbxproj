@@ -10,6 +10,7 @@
 		2A6101501A345FBE00B211B8 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A61014F1A345FBE00B211B8 /* SettingTableViewController.m */; };
 		2A6101531A345FD900B211B8 /* LCSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6101521A345FD900B211B8 /* LCSettingTableViewController.m */; };
 		2A6101561A346DC600B211B8 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6101551A346D9400B211B8 /* FontAwesome.otf */; };
+		2A9040751A3711B60000EB14 /* ChangePasswordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9040741A3711B60000EB14 /* ChangePasswordTableViewController.m */; };
 		2ABA20D81A345E410033FA7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA20D71A345E410033FA7B /* main.m */; };
 		2ABA20DB1A345E410033FA7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA20DA1A345E410033FA7B /* AppDelegate.m */; };
 		2ABA20DE1A345E410033FA7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA20DD1A345E410033FA7B /* ViewController.m */; };
@@ -36,6 +37,8 @@
 		2A6101511A345FD900B211B8 /* LCSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSettingTableViewController.h; sourceTree = "<group>"; };
 		2A6101521A345FD900B211B8 /* LCSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSettingTableViewController.m; sourceTree = "<group>"; };
 		2A6101551A346D9400B211B8 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		2A9040731A3711B60000EB14 /* ChangePasswordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordTableViewController.h; sourceTree = "<group>"; };
+		2A9040741A3711B60000EB14 /* ChangePasswordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordTableViewController.m; sourceTree = "<group>"; };
 		2ABA20D21A345E410033FA7B /* LogCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ABA20D61A345E410033FA7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2ABA20D71A345E410033FA7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				2A61014F1A345FBE00B211B8 /* SettingTableViewController.m */,
 				2A6101511A345FD900B211B8 /* LCSettingTableViewController.h */,
 				2A6101521A345FD900B211B8 /* LCSettingTableViewController.m */,
+				2A9040731A3711B60000EB14 /* ChangePasswordTableViewController.h */,
+				2A9040741A3711B60000EB14 /* ChangePasswordTableViewController.m */,
 			);
 			path = LogCloud;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 				2A6101531A345FD900B211B8 /* LCSettingTableViewController.m in Sources */,
 				2ABA20DE1A345E410033FA7B /* ViewController.m in Sources */,
 				2ABA20DB1A345E410033FA7B /* AppDelegate.m in Sources */,
+				2A9040751A3711B60000EB14 /* ChangePasswordTableViewController.m in Sources */,
 				2ABA20D81A345E410033FA7B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -96,11 +96,43 @@
                             <outlet property="delegate" destination="Nzm-gu-zIx" id="I54-5V-AdJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="LogCloud" id="uB7-DS-CS9"/>
+                    <navigationItem key="navigationItem" title="LogCloud" id="uB7-DS-CS9">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="f5c-t3-Jh8"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="hbB-dM-AKY" kind="show" identifier="passwordChangeSegue" id="TYQ-hd-ep4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJU-Mv-Qfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3583" y="897"/>
+        </scene>
+        <!--パスワード変更-->
+        <scene sceneID="bWl-nR-kq8">
+            <objects>
+                <tableViewController id="hbB-dM-AKY" customClass="ChangePasswordTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="gam-OW-khN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Uor-ig-vuD">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Uor-ig-vuD" id="p8W-XE-259">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hbB-dM-AKY" id="Rbd-Ub-BXX"/>
+                            <outlet property="delegate" destination="hbB-dM-AKY" id="Rgp-Pf-4qe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="パスワード変更" id="aUi-Rn-A1B"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eWC-6I-X7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4292" y="897"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1cT-Ng-y9d">
@@ -113,8 +145,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="oRn-Te-XGL" kind="relationship" relationship="viewControllers" id="A9w-Ra-nyj"/>
                         <segue destination="8Yy-No-T7S" kind="relationship" relationship="viewControllers" id="SEN-g7-CKQ"/>
+                        <segue destination="oRn-Te-XGL" kind="relationship" relationship="viewControllers" id="A9w-Ra-nyj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NE4-Cv-jzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
