@@ -12,6 +12,5 @@
 {
     UIFont *faFont;
     CGRect rect;
-
 }
 @end
