@@ -17,6 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        // do stuff with the user
+    } else {
+        [self performSegueWithIdentifier:@"toSignUpScreen" sender:self];
+    
+    }
 }
 
 - (void)didReceiveMemoryWarning {

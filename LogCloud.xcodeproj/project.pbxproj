@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0C2E6E1A3930EB00FC57C6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0C2E6D1A3930EB00FC57C6 /* MediaPlayer.framework */; };
+		2A0C2E741A39319F00FC57C6 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C2E731A39319F00FC57C6 /* SignUpViewController.m */; };
 		2A6101501A345FBE00B211B8 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A61014F1A345FBE00B211B8 /* SettingTableViewController.m */; };
 		2A6101531A345FD900B211B8 /* LCSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6101521A345FD900B211B8 /* LCSettingTableViewController.m */; };
 		2A6101561A346DC600B211B8 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6101551A346D9400B211B8 /* FontAwesome.otf */; };
@@ -32,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A0C2E6D1A3930EB00FC57C6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		2A0C2E721A39319F00FC57C6 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		2A0C2E731A39319F00FC57C6 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		2A61014E1A345FBE00B211B8 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
 		2A61014F1A345FBE00B211B8 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		2A6101511A345FD900B211B8 /* LCSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSettingTableViewController.h; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0C2E6E1A3930EB00FC57C6 /* MediaPlayer.framework in Frameworks */,
 				8466C5EE514466CC321B6028 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +129,8 @@
 				2A6101521A345FD900B211B8 /* LCSettingTableViewController.m */,
 				2A9040731A3711B60000EB14 /* ChangePasswordTableViewController.h */,
 				2A9040741A3711B60000EB14 /* ChangePasswordTableViewController.m */,
+				2A0C2E721A39319F00FC57C6 /* SignUpViewController.h */,
+				2A0C2E731A39319F00FC57C6 /* SignUpViewController.m */,
 			);
 			path = LogCloud;
 			sourceTree = "<group>";
@@ -156,6 +164,7 @@
 		C578E899591D8E72BB5E9606 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A0C2E6D1A3930EB00FC57C6 /* MediaPlayer.framework */,
 				C6BD8071B1DB8EA01ACB0E4D /* libPods.a */,
 			);
 			name = Frameworks;
@@ -302,6 +311,7 @@
 				2ABA20DE1A345E410033FA7B /* ViewController.m in Sources */,
 				2ABA20DB1A345E410033FA7B /* AppDelegate.m in Sources */,
 				2A9040751A3711B60000EB14 /* ChangePasswordTableViewController.m in Sources */,
+				2A0C2E741A39319F00FC57C6 /* SignUpViewController.m in Sources */,
 				2ABA20D81A345E410033FA7B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

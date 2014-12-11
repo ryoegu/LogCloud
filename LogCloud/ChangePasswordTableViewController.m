@@ -86,6 +86,8 @@
             nameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             //デリゲートを設定する
             nameTextField.delegate = self;
+            //パスワード用
+            nameTextField.secureTextEntry =YES;
             // セルに追加する
             [cell addSubview:nameTextField];
         }
@@ -108,6 +110,8 @@
             nameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             //デリゲートを設定する
             nameTextField.delegate = self;
+            //パスワード用
+            nameTextField.secureTextEntry =YES;
             // セルに追加する
             [cell addSubview:nameTextField];
         }else if(indexPath.row==1){
@@ -128,11 +132,34 @@
             nameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             //デリゲートを設定する
             nameTextField.delegate = self;
+            //パスワード用
+            nameTextField.secureTextEntry =YES;
             // セルに追加する
             [cell addSubview:nameTextField];
         }
     }
     return cell;
+}
+
+-(void)changePassword:(UITextField *)textField{
+    //Parseの処理
+}
+
+//新しいパスワードと確認パスワードが一致しているかチェック
+-(BOOL)passwordCheckWithConfirmPassword:(UITextField *)textField{
+    NSString *newPassword;
+    NSString *confirmPassword;
+    switch (textField.tag) {
+        case 2:
+            newPassword=textField.text;
+        case 3:
+            confirmPassword=textField.text;
+    }
+    if([newPassword isEqualToString:confirmPassword]){
+        return YES;
+    }else{
+        return NO;
+    }
 }
 
 
@@ -191,8 +218,21 @@
             [[self.view viewWithTag:3] becomeFirstResponder];
             return NO;
          default:
-            [textField resignFirstResponder];
-            return YES;
+            if([self passwordCheckWithConfirmPassword:textField]){
+                [self changePassword:textField];
+                [textField resignFirstResponder];
+                return YES;
+            }else{
+                UIAlertView *alert =[[UIAlertView alloc]
+                                     initWithTitle:@"パスワードが一致しません"
+                                     message:@"新しいパスワードと確認用パスワードには同じパスワードを入力してください。"
+                                     delegate:self
+                                     cancelButtonTitle:nil
+                                     otherButtonTitles:@"OK", nil];
+                
+                [alert show];
+                return NO;
+            }
     }
 }
 
