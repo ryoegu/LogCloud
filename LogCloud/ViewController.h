@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "LUKeychainAccess.h"
 
 @interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
-
+{
+    NSUserDefaults *saveData;
+    NSString *callsign;
+}
 
 @end
 

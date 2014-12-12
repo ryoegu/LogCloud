@@ -17,6 +17,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    LUKeychainAccess *keychainAccess=[LUKeychainAccess standardKeychainAccess];
+    saveData = [NSUserDefaults standardUserDefaults];
+    callsign = [saveData stringForKey:@"CALLSIGN"];
+    
+    if(callsign ==nil){
+        [self performSegueWithIdentifier:@"toSignUpScreen" sender:self];
+    }else{
+        [PFUser logInWithUsernameInBackground:callsign
+                                     password:[keychainAccess stringForKey:@"HASHED"]
+                                        block:^(PFUser *user, NSError *error) {
+                                            if (user) {
+                                                NSLog(@"Login Succeeded\ncallsign:%@",callsign);
+                                            } else {
+                                                NSLog(@"%@",error);
+                                            }
+                                        }];
+    }
+    /*
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
         // do stuff with the user
@@ -24,6 +42,7 @@
         [self performSegueWithIdentifier:@"toSignUpScreen" sender:self];
     
     }
+     */
 }
 
 - (void)didReceiveMemoryWarning {

@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-LUKeychainAccess.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>495C2A09E2FDF80E336CAF85</key>
+		<key>0DEFF6A42A5726069C487BB9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8D42FD34C50BFDEB0D07EBA1</key>
+		<key>5EFDAEC0858954BDB9A28357</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5F980ABE9F3E40C5624C4CD</key>
+		<key>80DF4EEA753090CE6E69AB41</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F0F23A29F65ABFC06E3F772D</key>
+		<key>96FF8A43C5D3731AFB5D95D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FC911BBFEF3522EE36898C00</key>
+		<key>9782EAE262D6D7E576979ACE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA18B54189638C1EB5C78265</key>
 		<dict>
 			<key>primary</key>
 			<true/>

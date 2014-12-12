@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import <LUKeychainAccess.h>
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface SignUpViewController : UIViewController
+@interface SignUpViewController : UIViewController<UITextFieldDelegate>
 {
     int mode;
     //mode==1 -> SignUp
@@ -18,9 +20,11 @@
     IBOutlet UILabel *titleLabel;
     IBOutlet UITextField *userNameTextField;
     
+    IBOutlet UITextField *mailaddressTextField;
     IBOutlet UITextField *passwordTextField;
     IBOutlet UITextField *confirmPasswordTextField;
     IBOutlet UIButton *changeButton;
 }
 - (IBAction)titleSet:(UIButton *)sender;
+-(BOOL)passwordCheckingWithConfirmTextField;
 @end
