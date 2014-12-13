@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import <LUKeychainAccess.h>
 
 @interface ChangePasswordTableViewController : UITableViewController<UITextFieldDelegate>
 {
     UIFont *faFont;
     CGRect rect;
+    
+    UITextField *oldPasswordTextField;
+    UITextField *newPasswordTextField;
+    UITextField *confirmPasswordTextField;
 }
 @end

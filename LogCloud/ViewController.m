@@ -17,10 +17,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    //UINavigationBarにButtonを追加
+    /*
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"userImageLittle.png"]];
+    imageView.frame = CGRectMake(0, 0, 35, 35);
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    imageView.userInteractionEnabled = YES;
+    [[imageView layer]setCornerRadius:17.5];
+    [imageView setClipsToBounds:YES];
+    
+    */
+    UIButton *imageView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
+    [imageView setBackgroundImage:[UIImage imageNamed:@"userImageLittle.png"]
+                          forState:UIControlStateNormal];
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    imageView.layer.cornerRadius=17.5f;
+    [imageView setClipsToBounds:YES];
+    [imageView addTarget:self action:@selector(toSettingView:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:imageView];
+    self.navigationItem.leftBarButtonItem = barButtonItem;
+    /*barButtonItem.target=self;
+    barButtonItem.action=@selector(toSettingView:);
+    */
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    //ログイン情報をUserDefaults・キーチェーンから読み出し
     LUKeychainAccess *keychainAccess=[LUKeychainAccess standardKeychainAccess];
     saveData = [NSUserDefaults standardUserDefaults];
     callsign = [saveData stringForKey:@"CALLSIGN"];
-    
     if(callsign ==nil){
         [self performSegueWithIdentifier:@"toSignUpScreen" sender:self];
     }else{
@@ -35,13 +62,13 @@
                                         }];
     }
     /*
-    PFUser *currentUser = [PFUser currentUser];
-    if (currentUser) {
-        // do stuff with the user
-    } else {
-        [self performSegueWithIdentifier:@"toSignUpScreen" sender:self];
-    
-    }
+     PFUser *currentUser = [PFUser currentUser];
+     if (currentUser) {
+     // do stuff with the user
+     } else {
+     [self performSegueWithIdentifier:@"toSignUpScreen" sender:self];
+     
+     }
      */
 }
 
@@ -59,6 +86,10 @@
     return 1;
 }
 
+-(void)updateCell{
+    
+}
+
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
  
@@ -66,6 +97,11 @@
  
  return cell;
  }
+
+-(void)toSettingView:(id)sender{
+    NSLog(@"Entered");
+    [self performSegueWithIdentifier:@"toSettingView" sender:self];
+}
 
 
 

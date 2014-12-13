@@ -24,6 +24,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -73,23 +76,23 @@
             cell.textLabel.font=faFont;
             cell.textLabel.text = @"\uf023";
             // テキストフィールドを設定する
-            UITextField * nameTextField =[[UITextField alloc]initWithFrame:CGRectMake(60, 10, rect.size.width-100, 25)];
+            oldPasswordTextField =[[UITextField alloc]initWithFrame:CGRectMake(60, 10, rect.size.width-100, 25)];
             //プレイスホルダーを設定する
-            nameTextField.placeholder = @"古いパスワード";
+            oldPasswordTextField.placeholder = @"古いパスワード";
             // タグを設定する
-            nameTextField.tag = 1;
+            oldPasswordTextField.tag = 1;
             // キーボードの種類を設定する
-            nameTextField.keyboardType = UIKeyboardTypeDefault;
+            oldPasswordTextField.keyboardType = UIKeyboardTypeDefault;
             // キーボードのリターンキーの種類を設定する
-            nameTextField.returnKeyType = UIReturnKeyNext;
+            oldPasswordTextField.returnKeyType = UIReturnKeyNext;
             // テキスト入力中に消去ボタンを表示するように設定する
-            nameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+            oldPasswordTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             //デリゲートを設定する
-            nameTextField.delegate = self;
+            oldPasswordTextField.delegate = self;
             //パスワード用
-            nameTextField.secureTextEntry =YES;
+            oldPasswordTextField.secureTextEntry =YES;
             // セルに追加する
-            [cell addSubview:nameTextField];
+            [cell addSubview:oldPasswordTextField];
         }
     }else if(indexPath.section==1){
         if(indexPath.row==0){
@@ -97,45 +100,45 @@
             cell.textLabel.font=faFont;
             cell.textLabel.text = @"\uf023";
             // テキストフィールドを設定する
-            UITextField * nameTextField =[[UITextField alloc]initWithFrame:CGRectMake(60, 10, rect.size.width-100, 25)];
+            newPasswordTextField =[[UITextField alloc]initWithFrame:CGRectMake(60, 10, rect.size.width-100, 25)];
             //プレイスホルダーを設定する
-            nameTextField.placeholder = @"新しいパスワード";
+            newPasswordTextField.placeholder = @"新しいパスワード";
             // タグを設定する
-            nameTextField.tag = 2;
+            newPasswordTextField.tag = 2;
             // キーボードの種類を設定する
-            nameTextField.keyboardType = UIKeyboardTypeDefault;
+            newPasswordTextField.keyboardType = UIKeyboardTypeDefault;
             // キーボードのリターンキーの種類を設定する
-            nameTextField.returnKeyType = UIReturnKeyNext;
+            newPasswordTextField.returnKeyType = UIReturnKeyNext;
             // テキスト入力中に消去ボタンを表示するように設定する
-            nameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+            newPasswordTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             //デリゲートを設定する
-            nameTextField.delegate = self;
+            newPasswordTextField.delegate = self;
             //パスワード用
-            nameTextField.secureTextEntry =YES;
+            newPasswordTextField.secureTextEntry =YES;
             // セルに追加する
-            [cell addSubview:nameTextField];
+            [cell addSubview:newPasswordTextField];
         }else if(indexPath.row==1){
             // セルのタイトルを設定する
             cell.textLabel.font=faFont;
             cell.textLabel.text = @"\uf023";
             // テキストフィールドを設定する
-            UITextField * nameTextField =[[UITextField alloc]initWithFrame:CGRectMake(60, 10, rect.size.width-100, 25)];
+            confirmPasswordTextField =[[UITextField alloc]initWithFrame:CGRectMake(60, 10, rect.size.width-100, 25)];
             //プレイスホルダーを設定する
-            nameTextField.placeholder = @"新しいパスワード（再入力）";
+            confirmPasswordTextField.placeholder = @"新しいパスワード（再入力）";
             // タグを設定する
-            nameTextField.tag = 3;
+            confirmPasswordTextField.tag = 3;
             // キーボードの種類を設定する
-            nameTextField.keyboardType = UIKeyboardTypeDefault;
+            confirmPasswordTextField.keyboardType = UIKeyboardTypeDefault;
             // キーボードのリターンキーの種類を設定する
-            nameTextField.returnKeyType = UIReturnKeyNext;
+            confirmPasswordTextField.returnKeyType = UIReturnKeyNext;
             // テキスト入力中に消去ボタンを表示するように設定する
-            nameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+            confirmPasswordTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             //デリゲートを設定する
-            nameTextField.delegate = self;
+            confirmPasswordTextField.delegate = self;
             //パスワード用
-            nameTextField.secureTextEntry =YES;
+            confirmPasswordTextField.secureTextEntry =YES;
             // セルに追加する
-            [cell addSubview:nameTextField];
+            [cell addSubview:confirmPasswordTextField];
         }
     }
     return cell;
@@ -143,19 +146,23 @@
 
 -(void)changePassword:(UITextField *)textField{
     //Parseの処理
+    NSUserDefaults *saveData =[NSUserDefaults standardUserDefaults];
+    PFUser *user = [PFUser logInWithUsername:[saveData objectForKey:@"CALLSIGN"] password:oldPasswordTextField.text];
+    //新しいパスワードを設定
+    user.password=newPasswordTextField.text;
+    [user save];
+    
+    //キーチェーンに保存
+    LUKeychainAccess *keychainAccess = [LUKeychainAccess standardKeychainAccess];
+    [keychainAccess setString:newPasswordTextField.text forKey:@"HASHED"];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 //新しいパスワードと確認パスワードが一致しているかチェック
 -(BOOL)passwordCheckWithConfirmPassword:(UITextField *)textField{
-    NSString *newPassword;
-    NSString *confirmPassword;
-    switch (textField.tag) {
-        case 2:
-            newPassword=textField.text;
-        case 3:
-            confirmPassword=textField.text;
-    }
-    if([newPassword isEqualToString:confirmPassword]){
+    if([newPasswordTextField.text isEqualToString:confirmPasswordTextField.text]){
         return YES;
     }else{
         return NO;

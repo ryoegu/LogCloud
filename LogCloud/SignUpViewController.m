@@ -18,7 +18,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [userNameTextField becomeFirstResponder];
-    NSLog(@"test");
     mode=1;
     userNameTextField.delegate=self;
     mailaddressTextField.delegate=self;
@@ -54,7 +53,6 @@
         user.email = mailaddressTextField.text;
         
         // other fields can be set just like with PFObject
-        
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
                 NSUserDefaults *saveData = [NSUserDefaults standardUserDefaults];

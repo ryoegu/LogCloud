@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A0C2E6E1A3930EB00FC57C6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0C2E6D1A3930EB00FC57C6 /* MediaPlayer.framework */; };
 		2A0C2E741A39319F00FC57C6 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C2E731A39319F00FC57C6 /* SignUpViewController.m */; };
+		2A1E795D1A3AFC320048BCB0 /* userImageLittle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A1E795C1A3AFC320048BCB0 /* userImageLittle.png */; };
 		2A6101501A345FBE00B211B8 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A61014F1A345FBE00B211B8 /* SettingTableViewController.m */; };
 		2A6101531A345FD900B211B8 /* LCSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6101521A345FD900B211B8 /* LCSettingTableViewController.m */; };
 		2A6101561A346DC600B211B8 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6101551A346D9400B211B8 /* FontAwesome.otf */; };
@@ -37,6 +38,7 @@
 		2A0C2E6D1A3930EB00FC57C6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		2A0C2E721A39319F00FC57C6 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		2A0C2E731A39319F00FC57C6 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		2A1E795C1A3AFC320048BCB0 /* userImageLittle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userImageLittle.png; sourceTree = "<group>"; };
 		2A61014E1A345FBE00B211B8 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
 		2A61014F1A345FBE00B211B8 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		2A6101511A345FD900B211B8 /* LCSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSettingTableViewController.h; sourceTree = "<group>"; };
@@ -91,6 +93,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2A1E795B1A3AFC320048BCB0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2A1E795C1A3AFC320048BCB0 /* userImageLittle.png */,
+			);
+			name = images;
+			path = LogCloud/images;
+			sourceTree = "<group>";
+		};
 		2ABA20C91A345E410033FA7B = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +111,7 @@
 				2ABA20D31A345E410033FA7B /* Products */,
 				143DC10010B04145A36BE149 /* Pods */,
 				C578E899591D8E72BB5E9606 /* Frameworks */,
+				2A1E795B1A3AFC320048BCB0 /* images */,
 			);
 			sourceTree = "<group>";
 		};
@@ -254,6 +266,7 @@
 			files = (
 				2A6101561A346DC600B211B8 /* FontAwesome.otf in Resources */,
 				2ABA20E11A345E410033FA7B /* Main.storyboard in Resources */,
+				2A1E795D1A3AFC320048BCB0 /* userImageLittle.png in Resources */,
 				2ABA20E61A345E410033FA7B /* LaunchScreen.xib in Resources */,
 				2ABA20E31A345E410033FA7B /* Images.xcassets in Resources */,
 			);

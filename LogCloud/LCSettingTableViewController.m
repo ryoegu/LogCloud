@@ -17,7 +17,8 @@
     [super viewDidLoad];
     faFont=[UIFont fontWithName:@"FontAwesome" size:20];
     rect = [[UIScreen mainScreen] bounds];
-
+    
+    saveData=[NSUserDefaults standardUserDefaults];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -106,6 +107,7 @@
             nameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             //デリゲートを設定する
             nameTextField.delegate = self;
+            nameTextField.text = [saveData objectForKey:@"NAME"];
             // セルに追加する
             [cell addSubview:nameTextField];
         } else if (indexPath.row == 1) {
@@ -127,6 +129,7 @@
             callSignTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             //デリゲートを設定する
             callSignTextField.delegate = self;
+            callSignTextField.text = [saveData objectForKey:@"CALLSIGN"];
             // セルに追加する
             [cell addSubview:callSignTextField];
         } else if(indexPath.row==2){
@@ -148,6 +151,7 @@
             nameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             //デリゲートを設定する
             nameTextField.delegate = self;
+            nameTextField.text=[saveData objectForKey:@"WEBSITE"];
             // セルに追加する
             [cell addSubview:nameTextField];
         }else if(indexPath.row==3){
@@ -169,6 +173,7 @@
             nameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             //デリゲートを設定する
             nameTextField.delegate = self;
+            nameTextField.text=[saveData objectForKey:@"COMMENT"];
             // セルに追加する
             [cell addSubview:nameTextField];
         }
@@ -243,6 +248,11 @@
 
 }
 -(IBAction)qslExchangeSwitchEvent{
+    
+}
+
+-(void)saveOnUserDefaults{
+    [saveData setObject:callSignTextField.text forKey:@"CALLSIGN"];
     
 }
 

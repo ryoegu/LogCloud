@@ -14,5 +14,7 @@
     UIFont*faFont;
     UITextField * callSignTextField;
     CGRect rect;
+    
+    NSUserDefaults *saveData;
 }
 @end
