@@ -73,7 +73,34 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iV4-EP-52A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2842" y="897"/>
+            <point key="canvasLocation" x="3018" y="269"/>
+        </scene>
+        <!--交信記録を追加-->
+        <scene sceneID="3zH-G1-czv">
+            <objects>
+                <tableViewController id="v8A-Bb-Hd8" customClass="AddLogTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="22" sectionFooterHeight="22" id="ut9-8v-Svt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="56" id="FI8-Ti-n4U">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FI8-Ti-n4U" id="det-28-Xr8">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="v8A-Bb-Hd8" id="PIw-Zq-xJl"/>
+                            <outlet property="delegate" destination="v8A-Bb-Hd8" id="JWo-tx-fCd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="交信記録を追加" id="m1c-XX-VWg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ay-12-myK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3018" y="1007"/>
         </scene>
         <!--LogCloud-->
         <scene sceneID="gHM-MH-OuX">
@@ -106,7 +133,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJU-Mv-Qfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3583" y="897"/>
+            <point key="canvasLocation" x="3791" y="269"/>
         </scene>
         <!--パスワード変更-->
         <scene sceneID="bWl-nR-kq8">
@@ -133,7 +160,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWC-6I-X7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4292" y="897"/>
+            <point key="canvasLocation" x="4528" y="269"/>
         </scene>
         <!--LogCloudへようこそ-->
         <scene sceneID="wQE-HW-vLK">
@@ -221,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hjt-PS-4Hr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3058" y="-505"/>
+            <point key="canvasLocation" x="2262" y="-421"/>
         </scene>
         <!--ホーム-->
         <scene sceneID="6Jj-Jd-Myq">
@@ -255,11 +282,12 @@
                     <connections>
                         <segue destination="a11-wo-zSs" kind="presentation" identifier="toSignUpScreen" id="Jbb-MC-ugk"/>
                         <segue destination="oRn-Te-XGL" kind="presentation" identifier="toSettingView" id="F8d-6A-oog"/>
+                        <segue destination="AjO-xK-0Jj" kind="presentation" identifier="toAddLogView" modalTransitionStyle="flipHorizontal" id="HRn-IK-Ew2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5XM-EO-w3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2849" y="207"/>
+            <point key="canvasLocation" x="1389" y="291"/>
         </scene>
         <!--設定-->
         <scene sceneID="tQX-nh-DKD">
@@ -278,7 +306,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pFa-Ln-oSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1961" y="1005"/>
+            <point key="canvasLocation" x="2269" y="269"/>
         </scene>
         <!--ホーム-->
         <scene sceneID="Fjt-KL-R0v">
@@ -297,7 +325,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVs-5d-WNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1961" y="347"/>
+            <point key="canvasLocation" x="649" y="291"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="llj-Ud-CgM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AjO-xK-0Jj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zNl-BM-FxG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="v8A-Bb-Hd8" kind="relationship" relationship="rootViewController" id="PJ8-qm-PxL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZV-rN-L48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2276" y="1028"/>
         </scene>
     </scenes>
 </document>

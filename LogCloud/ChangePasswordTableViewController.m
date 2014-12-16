@@ -147,10 +147,12 @@
 -(void)changePassword:(UITextField *)textField{
     //Parseの処理
     NSUserDefaults *saveData =[NSUserDefaults standardUserDefaults];
-    PFUser *user = [PFUser logInWithUsername:[saveData objectForKey:@"CALLSIGN"] password:oldPasswordTextField.text];
+    PFUser *currentUser = [PFUser currentUser];
+    NSString *userId = [PFUser currentUser].objectId;
+    //PFUser *user = [PFUser logInWithUsername:[saveData objectForKey:@"CALLSIGN"] password:oldPasswordTextField.text];
     //新しいパスワードを設定
-    user.password=newPasswordTextField.text;
-    [user save];
+    currentUser.password=newPasswordTextField.text;
+    [currentUser save];
     
     //キーチェーンに保存
     LUKeychainAccess *keychainAccess = [LUKeychainAccess standardKeychainAccess];

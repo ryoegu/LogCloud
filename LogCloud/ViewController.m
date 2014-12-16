@@ -27,6 +27,9 @@
     [imageView setClipsToBounds:YES];
     
     */
+    
+    rect = [[UIScreen mainScreen] bounds];
+    
     UIButton *imageView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
     [imageView setBackgroundImage:[UIImage imageNamed:@"userImageLittle.png"]
                           forState:UIControlStateNormal];
@@ -34,13 +37,23 @@
     imageView.layer.cornerRadius=17.5f;
     [imageView setClipsToBounds:YES];
     [imageView addTarget:self action:@selector(toSettingView:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
     UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:imageView];
     self.navigationItem.leftBarButtonItem = barButtonItem;
-    /*barButtonItem.target=self;
-    barButtonItem.action=@selector(toSettingView:);
-    */
+    /*addButton*/
+    UIButton *addButton = [[UIButton alloc]initWithFrame:CGRectMake(rect.size.width/2-25, rect.size.height-100, 50, 50)];
+    [addButton setBackgroundImage:[UIImage imageNamed:@"addImage.png"] forState:UIControlStateNormal];
+    //影用のview
+    UIView *shadow = [[UIView alloc] initWithFrame:addButton.frame];
+    shadow.backgroundColor = [UIColor grayColor];
+    shadow.layer.shadowOpacity = 0.3f;
+    shadow.layer.shadowOffset = CGSizeMake(0, 2);
+    shadow.layer.cornerRadius = 25.f;
+    [self.view addSubview:shadow];
+    
+    [addButton addTarget:self action:@selector(toAddLogView:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:addButton];
+    addButton.layer.cornerRadius = 25.f;//角丸用
+    addButton.layer.masksToBounds = YES;//角丸用
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
@@ -61,15 +74,7 @@
                                             }
                                         }];
     }
-    /*
-     PFUser *currentUser = [PFUser currentUser];
-     if (currentUser) {
-     // do stuff with the user
-     } else {
-     [self performSegueWithIdentifier:@"toSignUpScreen" sender:self];
-     
-     }
-     */
+  
 }
 
 - (void)didReceiveMemoryWarning {
@@ -101,6 +106,9 @@
 -(void)toSettingView:(id)sender{
     NSLog(@"Entered");
     [self performSegueWithIdentifier:@"toSettingView" sender:self];
+}
+-(void)toAddLogView:(id)sender{
+    [self performSegueWithIdentifier:@"toAddLogView" sender:self];
 }
 
 
