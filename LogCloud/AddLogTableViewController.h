@@ -17,4 +17,6 @@
     UIPickerView *picker;
     NSArray *signalArray;
 }
+- (IBAction)closeButton:(id)sender;
+
 @end

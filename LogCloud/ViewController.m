@@ -18,16 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    //UINavigationBarにButtonを追加
-    /*
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"userImageLittle.png"]];
-    imageView.frame = CGRectMake(0, 0, 35, 35);
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
-    imageView.userInteractionEnabled = YES;
-    [[imageView layer]setCornerRadius:17.5];
-    [imageView setClipsToBounds:YES];
     
-    */
+    //KIProgressView
+    [self makeKIProgressView];
+    //UINavigationBarにButtonを追加
     //CGRect
     rect = [[UIScreen mainScreen] bounds];
     
@@ -60,6 +54,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
     //ログイン情報をUserDefaults・キーチェーンから読み出し
+    [[KIProgressViewManager manager] showProgressOnView:self.view];
     LUKeychainAccess *keychainAccess=[LUKeychainAccess standardKeychainAccess];
     saveData = [NSUserDefaults standardUserDefaults];
     callsign = [saveData stringForKey:@"CALLSIGN"];
@@ -71,6 +66,7 @@
                                         block:^(PFUser *user, NSError *error) {
                                             if (user) {
                                                 NSLog(@"Login Succeeded\ncallsign:%@",callsign);
+                                                [[KIProgressViewManager manager] hideProgressView];
                                             } else {
                                                 NSLog(@"%@",error);
                                             }
@@ -98,6 +94,22 @@
  
  return cell;
  }
+
+#pragma mark - KIProgressView
+
+- (void)makeKIProgressView
+{
+    [[KIProgressViewManager manager] setPosition:KIProgressViewPositionBottom];
+    // Set the color
+    [[KIProgressViewManager manager] setColor:[UIColor greenColor]];
+    
+    // Set the gradient
+    [[KIProgressViewManager manager] setGradientStartColor:[UIColor blackColor]];
+    [[KIProgressViewManager manager] setGradientEndColor:[UIColor whiteColor]];
+    
+    // Currently not supported
+    [[KIProgressViewManager manager] setStyle:KIProgressViewStyleRepeated];
+}
 
 #pragma mark - Segue Methods
 -(void)toSettingView:(id)sender{

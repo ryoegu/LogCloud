@@ -40,7 +40,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark - Close Method
+- (IBAction)closeButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 #pragma mark - Parse Methods
 -(void)searchCallSign{
     
@@ -417,5 +420,6 @@
 }
 
 #pragma mark - get GL and JCC/JCG
+
 
 @end

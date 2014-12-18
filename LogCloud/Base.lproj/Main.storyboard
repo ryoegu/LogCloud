@@ -96,7 +96,13 @@
                             <outlet property="delegate" destination="v8A-Bb-Hd8" id="JWo-tx-fCd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="交信記録を追加" id="m1c-XX-VWg"/>
+                    <navigationItem key="navigationItem" title="交信記録を追加" id="m1c-XX-VWg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="ulm-yU-CZk">
+                            <connections>
+                                <action selector="closeButton:" destination="v8A-Bb-Hd8" id="b0q-vV-ztQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ay-12-myK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

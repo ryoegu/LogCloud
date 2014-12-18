@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "LUKeychainAccess.h"
 #import <QuartzCore/QuartzCore.h>
+#import "KIProgressViewManager.h"
 
 @interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 {
