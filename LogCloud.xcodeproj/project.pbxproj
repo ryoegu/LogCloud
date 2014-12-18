@@ -133,6 +133,8 @@
 		2ABA20D41A345E410033FA7B /* LogCloud */ = {
 			isa = PBXGroup;
 			children = (
+				2AEFDF341A42766800137FFC /* LogUpdate */,
+				2AEFDF331A42765500137FFC /* BasicSetting */,
 				2ABA20D91A345E410033FA7B /* AppDelegate.h */,
 				2ABA20DA1A345E410033FA7B /* AppDelegate.m */,
 				2ABA20DC1A345E410033FA7B /* ViewController.h */,
@@ -141,16 +143,8 @@
 				2ABA20E21A345E410033FA7B /* Images.xcassets */,
 				2ABA20E41A345E410033FA7B /* LaunchScreen.xib */,
 				2ABA20D51A345E410033FA7B /* Supporting Files */,
-				2A61014E1A345FBE00B211B8 /* SettingTableViewController.h */,
-				2A61014F1A345FBE00B211B8 /* SettingTableViewController.m */,
-				2A6101511A345FD900B211B8 /* LCSettingTableViewController.h */,
-				2A6101521A345FD900B211B8 /* LCSettingTableViewController.m */,
-				2A9040731A3711B60000EB14 /* ChangePasswordTableViewController.h */,
-				2A9040741A3711B60000EB14 /* ChangePasswordTableViewController.m */,
 				2A0C2E721A39319F00FC57C6 /* SignUpViewController.h */,
 				2A0C2E731A39319F00FC57C6 /* SignUpViewController.m */,
-				2A4ABBD01A400C7E00A255A5 /* AddLogTableViewController.h */,
-				2A4ABBD11A400C7E00A255A5 /* AddLogTableViewController.m */,
 			);
 			path = LogCloud;
 			sourceTree = "<group>";
@@ -179,6 +173,28 @@
 				2ABA20F01A345E410033FA7B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2AEFDF331A42765500137FFC /* BasicSetting */ = {
+			isa = PBXGroup;
+			children = (
+				2A61014E1A345FBE00B211B8 /* SettingTableViewController.h */,
+				2A61014F1A345FBE00B211B8 /* SettingTableViewController.m */,
+				2A6101511A345FD900B211B8 /* LCSettingTableViewController.h */,
+				2A6101521A345FD900B211B8 /* LCSettingTableViewController.m */,
+				2A9040731A3711B60000EB14 /* ChangePasswordTableViewController.h */,
+				2A9040741A3711B60000EB14 /* ChangePasswordTableViewController.m */,
+			);
+			name = BasicSetting;
+			sourceTree = "<group>";
+		};
+		2AEFDF341A42766800137FFC /* LogUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				2A4ABBD01A400C7E00A255A5 /* AddLogTableViewController.h */,
+				2A4ABBD11A400C7E00A255A5 /* AddLogTableViewController.m */,
+			);
+			name = LogUpdate;
 			sourceTree = "<group>";
 		};
 		C578E899591D8E72BB5E9606 /* Frameworks */ = {

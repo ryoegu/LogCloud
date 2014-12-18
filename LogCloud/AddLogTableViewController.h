@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface AddLogTableViewController : UITableViewController<UITextFieldDelegate>
+@interface AddLogTableViewController : UITableViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
 {
     UIFont *faFont;
     CGRect rect;
     NSUserDefaults *saveData;
+    UIPickerView *picker;
+    NSArray *signalArray;
 }
 @end

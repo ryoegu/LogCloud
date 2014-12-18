@@ -14,6 +14,7 @@
 
 @implementation ViewController
 
+#pragma mark - View Load Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -27,7 +28,7 @@
     [imageView setClipsToBounds:YES];
     
     */
-    
+    //CGRect
     rect = [[UIScreen mainScreen] bounds];
     
     UIButton *imageView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 35, 35)];
@@ -48,6 +49,7 @@
     shadow.layer.shadowOpacity = 0.3f;
     shadow.layer.shadowOffset = CGSizeMake(0, 2);
     shadow.layer.cornerRadius = 25.f;
+    shadow.alpha=0.7f;
     [self.view addSubview:shadow];
     
     [addButton addTarget:self action:@selector(toAddLogView:) forControlEvents:UIControlEventTouchUpInside];
@@ -77,10 +79,7 @@
   
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark - Table View Data Source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
@@ -91,9 +90,6 @@
     return 1;
 }
 
--(void)updateCell{
-    
-}
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
@@ -103,6 +99,7 @@
  return cell;
  }
 
+#pragma mark - Segue Methods
 -(void)toSettingView:(id)sender{
     NSLog(@"Entered");
     [self performSegueWithIdentifier:@"toSettingView" sender:self];
@@ -111,6 +108,10 @@
     [self performSegueWithIdentifier:@"toAddLogView" sender:self];
 }
 
-
+#pragma mark - MemoryWarning
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 @end

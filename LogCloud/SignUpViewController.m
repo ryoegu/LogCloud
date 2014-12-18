@@ -135,14 +135,6 @@
             return YES;
     }
 }
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if(buttonIndex == 1){
-        [self signUp];
-        
-    }else{
-        [[self.view viewWithTag:1] becomeFirstResponder];;
-    }
-}
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     // 該当のtextField
@@ -167,6 +159,17 @@
         return canEdit;
     }else return YES;
 }
+
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(buttonIndex == 1){
+        [self signUp];
+        
+    }else{
+        [[self.view viewWithTag:1] becomeFirstResponder];;
+    }
+}
+
 
 #pragma mark - Background Movie
 //背景動画再生用
