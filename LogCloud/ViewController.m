@@ -18,7 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    //Navigation Barの色
+    UIColor *color = [UIColor colorWithRed:0.4 green:0.8 blue:0.4 alpha:1.0];
+    self.navigationController.navigationBar.barTintColor = color;
     //KIProgressView
     [self makeKIProgressView];
     //UINavigationBarにButtonを追加
