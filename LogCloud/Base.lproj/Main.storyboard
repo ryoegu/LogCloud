@@ -166,7 +166,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWC-6I-X7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4528" y="269"/>
+            <point key="canvasLocation" x="4536" y="5"/>
         </scene>
         <!--LogCloudへようこそ-->
         <scene sceneID="wQE-HW-vLK">

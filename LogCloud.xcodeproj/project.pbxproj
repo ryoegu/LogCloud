@@ -22,6 +22,7 @@
 		2A1D61231A43206E00DD2B69 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1D61221A43206E00DD2B69 /* OpenGLES.framework */; };
 		2A1D61251A43207300DD2B69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1D61241A43207300DD2B69 /* QuartzCore.framework */; };
 		2A1D61271A43207900DD2B69 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1D61261A43207900DD2B69 /* SystemConfiguration.framework */; };
+		2A1D61291A43261900DD2B69 /* GoogleMaps.bundle in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D61281A43261900DD2B69 /* GoogleMaps.bundle */; };
 		2A1E795D1A3AFC320048BCB0 /* userImageLittle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A1E795C1A3AFC320048BCB0 /* userImageLittle.png */; };
 		2A4ABBD21A400C7E00A255A5 /* AddLogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4ABBD11A400C7E00A255A5 /* AddLogTableViewController.m */; };
 		2A4ABBD41A4010A900A255A5 /* addImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A4ABBD31A4010A900A255A5 /* addImage.png */; };
@@ -66,6 +67,7 @@
 		2A1D61221A43206E00DD2B69 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		2A1D61241A43207300DD2B69 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2A1D61261A43207900DD2B69 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2A1D61281A43261900DD2B69 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		2A1E795C1A3AFC320048BCB0 /* userImageLittle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userImageLittle.png; sourceTree = "<group>"; };
 		2A4ABBD01A400C7E00A255A5 /* AddLogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLogTableViewController.h; sourceTree = "<group>"; };
 		2A4ABBD11A400C7E00A255A5 /* AddLogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLogTableViewController.m; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		2ABA20C91A345E410033FA7B = {
 			isa = PBXGroup;
 			children = (
+				2A1D61281A43261900DD2B69 /* GoogleMaps.bundle */,
 				2A6101551A346D9400B211B8 /* FontAwesome.otf */,
 				2ABA20D41A345E410033FA7B /* LogCloud */,
 				2ABA20EE1A345E410033FA7B /* LogCloudTests */,
@@ -396,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A1D61291A43261900DD2B69 /* GoogleMaps.bundle in Sources */,
 				2A4ABBD21A400C7E00A255A5 /* AddLogTableViewController.m in Sources */,
 				2A6101501A345FBE00B211B8 /* SettingTableViewController.m in Sources */,
 				2A6101531A345FD900B211B8 /* LCSettingTableViewController.m in Sources */,

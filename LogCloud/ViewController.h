@@ -16,7 +16,6 @@
 {
     NSUserDefaults *saveData;
     NSString *callsign;
-    IBOutlet UIBarButtonItem *item;
     CGRect rect;
 }
 
