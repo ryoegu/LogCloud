@@ -17,8 +17,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //Parse APPLICATION Setting
     [Parse setApplicationId:PARSE_APPLICATION_ID
                   clientKey:PARSE_CLINET_KEY];
+    //Google Map Application Seting
+    [GMSServices provideAPIKey:GOOGLE_MAP_API_KEY];
     return YES;
 }
 
