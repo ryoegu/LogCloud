@@ -23,6 +23,8 @@
 		2A1D61251A43207300DD2B69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1D61241A43207300DD2B69 /* QuartzCore.framework */; };
 		2A1D61271A43207900DD2B69 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1D61261A43207900DD2B69 /* SystemConfiguration.framework */; };
 		2A1D61291A43261900DD2B69 /* GoogleMaps.bundle in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D61281A43261900DD2B69 /* GoogleMaps.bundle */; };
+		2A1D612E1A434E9700DD2B69 /* CustomRSReportKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D612D1A434E9700DD2B69 /* CustomRSReportKeyboard.m */; };
+		2A1D61301A434EC200DD2B69 /* CustomKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A1D612F1A434EC200DD2B69 /* CustomKeyboard.xib */; };
 		2A1E795D1A3AFC320048BCB0 /* userImageLittle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A1E795C1A3AFC320048BCB0 /* userImageLittle.png */; };
 		2A4ABBD21A400C7E00A255A5 /* AddLogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4ABBD11A400C7E00A255A5 /* AddLogTableViewController.m */; };
 		2A4ABBD41A4010A900A255A5 /* addImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A4ABBD31A4010A900A255A5 /* addImage.png */; };
@@ -68,6 +70,9 @@
 		2A1D61241A43207300DD2B69 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2A1D61261A43207900DD2B69 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2A1D61281A43261900DD2B69 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		2A1D612C1A434E9700DD2B69 /* CustomRSReportKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomRSReportKeyboard.h; sourceTree = "<group>"; };
+		2A1D612D1A434E9700DD2B69 /* CustomRSReportKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomRSReportKeyboard.m; sourceTree = "<group>"; };
+		2A1D612F1A434EC200DD2B69 /* CustomKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomKeyboard.xib; sourceTree = "<group>"; };
 		2A1E795C1A3AFC320048BCB0 /* userImageLittle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userImageLittle.png; sourceTree = "<group>"; };
 		2A4ABBD01A400C7E00A255A5 /* AddLogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLogTableViewController.h; sourceTree = "<group>"; };
 		2A4ABBD11A400C7E00A255A5 /* AddLogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLogTableViewController.m; sourceTree = "<group>"; };
@@ -187,6 +192,9 @@
 				2ABA20D51A345E410033FA7B /* Supporting Files */,
 				2A0C2E721A39319F00FC57C6 /* SignUpViewController.h */,
 				2A0C2E731A39319F00FC57C6 /* SignUpViewController.m */,
+				2A1D612C1A434E9700DD2B69 /* CustomRSReportKeyboard.h */,
+				2A1D612D1A434E9700DD2B69 /* CustomRSReportKeyboard.m */,
+				2A1D612F1A434EC200DD2B69 /* CustomKeyboard.xib */,
 			);
 			path = LogCloud;
 			sourceTree = "<group>";
@@ -346,6 +354,7 @@
 				2A6101561A346DC600B211B8 /* FontAwesome.otf in Resources */,
 				2ABA20E11A345E410033FA7B /* Main.storyboard in Resources */,
 				2A1E795D1A3AFC320048BCB0 /* userImageLittle.png in Resources */,
+				2A1D61301A434EC200DD2B69 /* CustomKeyboard.xib in Resources */,
 				2ABA20E61A345E410033FA7B /* LaunchScreen.xib in Resources */,
 				2ABA20E31A345E410033FA7B /* Images.xcassets in Resources */,
 				2A4ABBD41A4010A900A255A5 /* addImage.png in Resources */,
@@ -405,6 +414,7 @@
 				2A6101531A345FD900B211B8 /* LCSettingTableViewController.m in Sources */,
 				2ABA20DE1A345E410033FA7B /* ViewController.m in Sources */,
 				2ABA20DB1A345E410033FA7B /* AppDelegate.m in Sources */,
+				2A1D612E1A434E9700DD2B69 /* CustomRSReportKeyboard.m in Sources */,
 				2A9040751A3711B60000EB14 /* ChangePasswordTableViewController.m in Sources */,
 				2A0C2E741A39319F00FC57C6 /* SignUpViewController.m in Sources */,
 				2ABA20D81A345E410033FA7B /* main.m in Sources */,

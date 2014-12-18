@@ -11,12 +11,7 @@
 @interface AddLogTableViewController ()
 
 @end
-@implementation UINavigationController(KeyboardDismiss)
-- (BOOL)disablesAutomaticKeyboardDismissal
-{
-    return NO;
-}
-@end
+
 @implementation AddLogTableViewController
 
 #pragma mark - Basic Methods
@@ -30,7 +25,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self makePickerViewwithArray];
+    
+    customKeyboard = [CustomRSReportKeyboard new];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -145,19 +141,21 @@
             // セルに追加する
             [cell addSubview:nameTextField];
         }else if (indexPath.row == 1) {
-            // 名前
+            // RSSReport
             cell.textLabel.font=faFont;
             cell.textLabel.text = @"\uf0c0";
             // テキストフィールドを設定する
             UITextField * nameTextField =[[UITextField alloc]initWithFrame:CGRectMake(60, 10, rect.size.width-100, 25)];
             //プレイスホルダーを設定する
-            nameTextField.placeholder = @"相手のRS(T)レポート";
+            nameTextField.placeholder = @"自分のRS(T)レポート";
             // タグを設定する
-            nameTextField.tag = 11;
+            nameTextField.tag = 12;
             // キーボードの種類を設定する
-            nameTextField.keyboardType = UIKeyboardTypeNumberPad;
+            customKeyboard.activeTextField=nameTextField;
+            nameTextField.inputView=customKeyboard;
+            //nameTextField.keyboardType = UIKeyboardTypeNumberPad;
             // キーボードのリターンキーの種類を設定する
-            nameTextField.returnKeyType = UIReturnKeyNext;
+            //nameTextField.returnKeyType = UIReturnKeyNext;
             // テキスト入力中に消去ボタンを表示するように設定する
             nameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             //デリゲートを設定する
@@ -175,9 +173,11 @@
             // タグを設定する
             nameTextField.tag = 12;
             // キーボードの種類を設定する
-            nameTextField.keyboardType = UIKeyboardTypeNumberPad;
+            customKeyboard.activeTextField=nameTextField;
+            nameTextField.inputView=customKeyboard;
+            //nameTextField.keyboardType = UIKeyboardTypeNumberPad;
             // キーボードのリターンキーの種類を設定する
-            nameTextField.returnKeyType = UIReturnKeyNext;
+            //nameTextField.returnKeyType = UIReturnKeyNext;
             // テキスト入力中に消去ボタンを表示するように設定する
             nameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
             //デリゲートを設定する
@@ -378,19 +378,8 @@
         case 2:
             textField.text=[self nowTimeByString];
             return YES;
-        //case 11と12はRS(T)レポート
-        case 11:
-            //[textField resignFirstResponder];
-            [self showPicker];
-            return NO;
-            break;
-        case 12:
-            [textField resignFirstResponder];
-            [self showPicker];
-            return YES;
-            break;
+ 
         default:
-            [self hidePicker];
             return YES;
             break;
     }
@@ -409,12 +398,12 @@
             return YES;
             break;
         case 11:
-            [self hidePicker];
+//            [self hidePicker];
             [[self.view viewWithTag:12] resignFirstResponder];
             return YES;
             break;
         case 12:
-            [self hidePicker];
+//            [self hidePicker];
             [[self.view viewWithTag:4] becomeFirstResponder];
             return YES;
             break;
@@ -450,78 +439,6 @@
 }
 
 
-#pragma mark - PickerView関連のメソッド
-//ViewDidLoadで読み出される
--(void)makePickerViewwithArray{
-    //Arrayを作成
-    signalArray = [NSArray arrayWithObjects:@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", nil];
-    //PickerViewを生成
-    picker=[[UIPickerView alloc]initWithFrame:CGRectMake(0, 620,rect.size.width, 210)];
-    picker.showsSelectionIndicator=YES;
-    picker.delegate=self;
-    picker.dataSource=self;
-    picker.alpha=0.0f;
-    [self.view addSubview:picker];
-    
-}
-- (void)showPicker {
-    // ピッカーが下から出るアニメーション
-    picker.alpha=1.0f;
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.4];
-    [UIView setAnimationDelegate:self];
-    picker.frame = CGRectMake(0, rect.size.height-230,rect.size.width, 180);
-    picker.backgroundColor=[UIColor whiteColor];
-    
-    [UIView commitAnimations];
-    
-    // 右上にdoneボタン
-    if (!self.navigationItem.rightBarButtonItem) {
-        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done:)];
-        [self.navigationItem setRightBarButtonItem:doneButton animated:YES];
-    }
-}
-
-
-- (void)hidePicker {
-    // ピッカーが下に隠れるアニメーション
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.4];
-    [UIView setAnimationDelegate:self];
-    picker.frame = CGRectMake(0, 620,rect.size.width, 180);
-    [UIView commitAnimations];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        picker.alpha=0.0f;
-    });
-
-    // doneボタンを消す
-    [self.navigationItem setRightBarButtonItem:nil animated:YES];
-}
-
-
-- (void)done:(id)sender {
-    // ピッカーしまう
-    [self hidePicker];
-    
-    // doneボタン消す
-    [self.navigationItem setRightBarButtonItem:nil animated:YES];
-}
-
-#pragma mark - Picker View Delegate Mathods
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView*)pickerView{
-    return 3;
-}
--(NSInteger)pickerView:(UIPickerView*)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return 3;
-}
-// 表示する内容を返す例
--(NSString*)pickerView:(UIPickerView*)pickerView
-           titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    
-    // 行インデックス番号を返す
-    return [signalArray objectAtIndex:row];
-    
-}
 
 #pragma mark - get GL and JCC/JCG
 

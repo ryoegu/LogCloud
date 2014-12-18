@@ -247,7 +247,7 @@
     [self performSegueWithIdentifier:@"passwordChangeSegue" sender:self];
 
 }
--(IBAction)qslExchangeSwitchEvent{
+-(IBAction)qslExchangeSwitchEvent:(id)sender{
     
 }
 

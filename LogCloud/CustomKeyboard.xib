@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomRSReportKeyboard">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6n-hG-iBr">
+                    <rect key="frame" x="0.0" y="37" width="600" height="162"/>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86d-CV-bqm">
+                    <rect key="frame" x="546" y="8" width="46" height="30"/>
+                    <state key="normal" title="完了">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="doneButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="a0r-tA-POw"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="86d-CV-bqm" secondAttribute="trailing" constant="8" id="435-qe-wbr"/>
+                <constraint firstItem="86d-CV-bqm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="9wh-uN-oYS"/>
+                <constraint firstAttribute="trailing" secondItem="A6n-hG-iBr" secondAttribute="trailing" id="RWD-OZ-BsP"/>
+                <constraint firstItem="A6n-hG-iBr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UP6-s9-qao"/>
+                <constraint firstAttribute="bottom" secondItem="A6n-hG-iBr" secondAttribute="bottom" id="gL7-vZ-gZV"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="picker" destination="A6n-hG-iBr" id="eWe-71-tQe"/>
+            </connections>
+            <point key="canvasLocation" x="435" y="177.5"/>
+        </view>
+    </objects>
+</document>

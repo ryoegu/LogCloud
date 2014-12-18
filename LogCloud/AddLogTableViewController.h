@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "CustomRSReportKeyboard.h"
 
-@interface AddLogTableViewController : UITableViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate,UITextViewDelegate>
+@interface AddLogTableViewController : UITableViewController<UITextFieldDelegate,UITextViewDelegate>
 {
     UIFont *faFont;
     CGRect rect;
     NSUserDefaults *saveData;
     UIPickerView *picker;
     NSArray *signalArray;
+    UIToolbar *keyboardToolbar;
+    CustomRSReportKeyboard *customKeyboard;
 }
 - (IBAction)closeButton:(id)sender;
 
