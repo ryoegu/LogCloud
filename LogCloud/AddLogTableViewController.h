@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "CustomRSReportKeyboard.h"
+#import "UIPlaceHolderTextView.h"
 
 @interface AddLogTableViewController : UITableViewController<UITextFieldDelegate,UITextViewDelegate>
 {
@@ -19,6 +20,10 @@
     NSArray *signalArray;
     UIToolbar *keyboardToolbar;
     CustomRSReportKeyboard *customKeyboard;
+    IBOutlet UILabel *iconLabel;
+    IBOutlet UITextField *inputTextField;
+    IBOutlet UISwitch *qslSwitch;
+    
 }
 - (IBAction)closeButton:(id)sender;
 
