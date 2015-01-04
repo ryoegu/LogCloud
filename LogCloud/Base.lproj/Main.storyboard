@@ -421,9 +421,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アカウントを作成する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azU-09-NeF">
-                                <rect key="frame" x="53" y="50" width="494" height="21"/>
+                                <rect key="frame" x="53" y="28" width="494" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="BGx-lw-Jl7"/>
+                                    <constraint firstAttribute="height" constant="43" id="BGx-lw-Jl7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -471,7 +471,7 @@
                             <constraint firstItem="fxX-Vw-WM6" firstAttribute="centerX" secondItem="epO-vI-o58" secondAttribute="centerX" id="Di6-n4-iOW"/>
                             <constraint firstItem="j5Z-xs-i2a" firstAttribute="leading" secondItem="4tI-lw-g9r" secondAttribute="leading" id="JXH-WY-4VR"/>
                             <constraint firstItem="j5Z-xs-i2a" firstAttribute="centerX" secondItem="azU-09-NeF" secondAttribute="centerX" id="ON8-qG-Wdh"/>
-                            <constraint firstItem="azU-09-NeF" firstAttribute="top" secondItem="NBW-Ip-fXE" secondAttribute="bottom" constant="30" id="Qgt-yT-IKh"/>
+                            <constraint firstItem="azU-09-NeF" firstAttribute="top" secondItem="NBW-Ip-fXE" secondAttribute="bottom" constant="8" id="Qgt-yT-IKh"/>
                             <constraint firstItem="epO-vI-o58" firstAttribute="top" secondItem="udI-sD-1Uh" secondAttribute="bottom" constant="8" symbolic="YES" id="VM8-bD-S4u"/>
                             <constraint firstItem="epO-vI-o58" firstAttribute="centerX" secondItem="1iJ-Vl-Nbx" secondAttribute="centerX" id="Zcq-41-xDT"/>
                             <constraint firstItem="4tI-lw-g9r" firstAttribute="top" secondItem="j5Z-xs-i2a" secondAttribute="bottom" constant="8" symbolic="YES" id="p73-hP-qOx"/>
