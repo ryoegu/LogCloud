@@ -22,7 +22,6 @@
     
     IBOutlet UITextField *mailaddressTextField;
     IBOutlet UITextField *passwordTextField;
-    IBOutlet UITextField *confirmPasswordTextField;
     IBOutlet UIButton *changeButton;
 }
 - (IBAction)titleSet:(UIButton *)sender;

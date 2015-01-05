@@ -22,7 +22,6 @@
     userNameTextField.delegate=self;
     mailaddressTextField.delegate=self;
     passwordTextField.delegate=self;
-    confirmPasswordTextField.delegate=self;
 
 }
 
@@ -59,8 +58,6 @@
                 [saveData setObject:userNameTextField.text forKey:@"CALLSIGN"];
                 [saveData setObject:mailaddressTextField.text forKey:@"EMAIL"];
                 [saveData synchronize];
-                LUKeychainAccess *keychainAccess = [LUKeychainAccess standardKeychainAccess];
-                [keychainAccess setString:passwordTextField.text forKey:@"HASHED"];
                 [self dismissViewControllerAnimated:YES completion:nil];
             } else {
                 NSString *errorString = [error userInfo][@"error"];
@@ -68,6 +65,8 @@
                 // Show the errorString somewhere and let the user try again.
             }
         }];
+    }else{
+        
     }
 }
 
@@ -95,15 +94,6 @@
     }
 }
 
-#pragma mark - Password confirm check
--(BOOL)passwordCheckingWithConfirmTextField{
-    if([passwordTextField.text isEqualToString:confirmPasswordTextField.text]){
-        return YES;
-    }else{
-        return NO;
-    }
-}
-
 #pragma mark UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -113,9 +103,6 @@
             return YES;
         case 2:
             [[self.view viewWithTag:3] becomeFirstResponder];
-            return NO;
-        case 3:
-            [[self.view viewWithTag:4] becomeFirstResponder];
             return NO;
         default:
             [textField resignFirstResponder];
